@@ -27,7 +27,7 @@ namespace MariaBlogJuridico.Controllers
 
                 // DE: Quem está enviando (Geralmente é o próprio sistema)
                 // Coloque SEU e-mail do Gmail aqui
-                email.From.Add(new MailboxAddress("Site JurisBlog", "luiz.felipesbc@gmail.com"));
+                email.From.Add(new MailboxAddress("Site MariaBlogJuridico_V2", "luiz.felipesbc@gmail.com"));
 
                 // PARA: Quem vai receber (O Advogado/Você)
                 // Coloque o e-mail onde você quer RECEBER os avisos

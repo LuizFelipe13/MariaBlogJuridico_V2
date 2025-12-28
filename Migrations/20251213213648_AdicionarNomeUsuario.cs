@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace JurisBlog.Migrations
+namespace MariaBlogJuridico_V2.Migrations
 {
     /// <inheritdoc />
     public partial class AdicionarNomeUsuario : Migration

@@ -1,4 +1,4 @@
-﻿namespace JurisBlog.Models
+﻿namespace MariaBlogJuridico_V2.Models
 {
     public class Usuario
     {

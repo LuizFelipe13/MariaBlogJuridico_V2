@@ -20,7 +20,7 @@ var Sobre = function () {
                     react_1.default.createElement("h2", { className: "text-3xl font-serif font-bold text-slate-800 mb-6" }, "Compromisso com a Justi\u00E7a"),
                     react_1.default.createElement("p", { className: "text-slate-600 mb-4 leading-relaxed" },
                         "Fundado em 2008, o ",
-                        react_1.default.createElement("strong", null, "JurisBlog Advogados"),
+                        react_1.default.createElement("strong", null, "MariaBlogJuridico_V2 Advogados"),
                         " nasceu com a miss\u00E3o de oferecer uma advocacia moderna e humanizada. Entendemos que por tr\u00E1s de cada processo existe uma hist\u00F3ria de vida ou o futuro de uma empresa."),
                     react_1.default.createElement("p", { className: "text-slate-600 mb-6 leading-relaxed" }, "Nossa equipe \u00E9 formada por especialistas em diversas \u00E1reas do direito, prontos para atuar de forma combativa e estrat\u00E9gica, garantindo que seus direitos sejam respeitados em qualquer inst\u00E2ncia."),
                     react_1.default.createElement("div", { className: "grid grid-cols-2 gap-4 mb-8" },

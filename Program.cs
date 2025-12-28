@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using JurisBlog.Data;
+using MariaBlogJuridico_V2.Data;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;

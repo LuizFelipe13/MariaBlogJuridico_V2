@@ -17,7 +17,7 @@ const Footer = () => {
                         <div className="flex items-center gap-2 mb-6 text-white">
                             <Scale size={32} className="text-amber-500" />
                             <div>
-                                <h2 className="text-2xl font-serif font-bold leading-none">JurisBlog</h2>
+                                <h2 className="text-2xl font-serif font-bold leading-none">MariaBlogJuridico_V2</h2>
                                 <span className="text-xs text-slate-500 tracking-widest uppercase">Direito & Justiça</span>
                             </div>
                         </div>
@@ -99,7 +99,7 @@ const Footer = () => {
 
                 {/* BARRA INFERIOR (Copyright) */}
                 <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500">
-                    <p>© {new Date().getFullYear()} JurisBlog Advogados Associados. Todos os direitos reservados.</p>
+                    <p>© {new Date().getFullYear()} MariaBlogJuridico_V2 Advogados Associados. Todos os direitos reservados.</p>
                     <div className="flex gap-6 mt-4 md:mt-0">
                         <span>OAB/SP 123.456</span>
                         <span className="hover:text-slate-300 cursor-pointer">Termos de Uso</span>

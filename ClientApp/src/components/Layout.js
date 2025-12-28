@@ -22,7 +22,7 @@ var Layout = function (_a) {
     return (react_1.default.createElement("div", { className: "flex h-screen bg-slate-50" },
         react_1.default.createElement("div", { className: "".concat(isSidebarOpen ? 'w-64' : 'w-20', " bg-slate-900 text-white transition-all duration-300 flex flex-col") },
             react_1.default.createElement("div", { className: "p-4 flex items-center justify-between border-b border-slate-700" },
-                isSidebarOpen && react_1.default.createElement("h1", { className: "font-serif text-xl font-bold text-amber-500" }, "JurisBlog"),
+                isSidebarOpen && react_1.default.createElement("h1", { className: "font-serif text-xl font-bold text-amber-500" }, "MariaBlogJuridico_V2"),
                 react_1.default.createElement("button", { onClick: function () { return setIsSidebarOpen(!isSidebarOpen); }, className: "p-1 hover:bg-slate-800 rounded" },
                     react_1.default.createElement(lucide_react_1.Menu, { size: 24 }))),
             react_1.default.createElement("nav", { className: "flex-1 p-4 space-y-2" },

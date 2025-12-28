@@ -25,7 +25,7 @@ const PublicLayout: React.FC<LayoutProps> = ({ children }) => {
                         <div onClick={() => navigate('/')} className="flex items-center gap-2 cursor-pointer hover:text-amber-500 transition">
                             <Scale size={32} className="text-amber-500" />
                             <div>
-                                <h1 className="text-2xl font-serif font-bold leading-none">JurisBlog</h1>
+                                <h1 className="text-2xl font-serif font-bold leading-none">MariaBlogJuridico_V2</h1>
                                 <span className="text-xs text-slate-400 tracking-widest uppercase">Direito & Justiça</span>
                             </div>
                         </div>

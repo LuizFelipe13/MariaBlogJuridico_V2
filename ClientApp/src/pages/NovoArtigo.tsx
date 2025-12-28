@@ -57,7 +57,7 @@ const NovoArtigo = () => {
                     conteudo,
                     // AQUI ESTÁ A MUDANÇA:
                     // Tenta pegar o nome salvo no login. Se não tiver, usa um padrão.
-                    autor: localStorage.getItem('usuario-nome') || "Equipe JurisBlog",
+                    autor: localStorage.getItem('usuario-nome') || "Equipe MariaBlogJuridico_V2",
                     urlImagem: urlImagem
                 })
             });

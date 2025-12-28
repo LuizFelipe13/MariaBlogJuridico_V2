@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace JurisBlog.Controllers
+namespace MariaBlogJuridico_V2.Controllers
 {
     [ApiController]
     [Route("[controller]")]

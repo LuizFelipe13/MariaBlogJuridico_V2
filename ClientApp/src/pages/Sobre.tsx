@@ -41,7 +41,7 @@ const Sobre = () => {
                             Compromisso com a Justiça
                         </h2>
                         <p className="text-slate-600 mb-4 leading-relaxed">
-                            Fundado em 2008, o <strong>JurisBlog Advogados</strong> nasceu com a missão de oferecer uma advocacia moderna e humanizada. Entendemos que por trás de cada processo existe uma história de vida ou o futuro de uma empresa.
+                            Fundado em 2008, o <strong>MariaBlogJuridico_V2 Advogados</strong> nasceu com a missão de oferecer uma advocacia moderna e humanizada. Entendemos que por trás de cada processo existe uma história de vida ou o futuro de uma empresa.
                         </p>
                         <p className="text-slate-600 mb-6 leading-relaxed">
                             Nossa equipe é formada por especialistas em diversas áreas do direito, prontos para atuar de forma combativa e estratégica, garantindo que seus direitos sejam respeitados em qualquer instância.

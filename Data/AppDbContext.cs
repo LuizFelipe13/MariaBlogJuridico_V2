@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using JurisBlog.Models;
+using MariaBlogJuridico_V2.Models;
 
-namespace JurisBlog.Data
+namespace MariaBlogJuridico_V2.Data
 {
     public class AppDbContext : DbContext
     {

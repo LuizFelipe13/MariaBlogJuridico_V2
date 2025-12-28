@@ -4,10 +4,10 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using JurisBlog.Data;
-using JurisBlog.Models;
+using MariaBlogJuridico_V2.Data;
+using MariaBlogJuridico_V2.Models;
 
-namespace JurisBlog.Controllers
+namespace MariaBlogJuridico_V2.Controllers
 {
     [Route("[controller]")]
     [ApiController]

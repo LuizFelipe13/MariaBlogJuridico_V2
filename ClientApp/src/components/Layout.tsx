@@ -31,7 +31,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
                 {/* Topo do Menu */}
                 <div className="p-4 flex items-center justify-between border-b border-slate-700">
-                    {isSidebarOpen && <h1 className="font-serif text-xl font-bold text-amber-500">JurisBlog</h1>}
+                    {isSidebarOpen && <h1 className="font-serif text-xl font-bold text-amber-500">MariaBlogJuridico_V2</h1>}
                     <button onClick={() => setIsSidebarOpen(!isSidebarOpen)} className="p-1 hover:bg-slate-800 rounded">
                         <Menu size={24} />
                     </button>
