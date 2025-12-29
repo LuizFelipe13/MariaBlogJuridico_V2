@@ -27,11 +27,11 @@ namespace MariaBlogJuridico.Controllers
 
                 // DE: Quem está enviando (Geralmente é o próprio sistema)
                 // Coloque SEU e-mail do Gmail aqui
-                email.From.Add(new MailboxAddress("Site MariaBlogJuridico_V2", "luiz.felipesbc@gmail.com"));
+                email.From.Add(new MailboxAddress("Site MariaBlogJuridico_V2", "rodriguesgracaadvocacia@gmail.com"));
 
                 // PARA: Quem vai receber (O Advogado/Você)
                 // Coloque o e-mail onde você quer RECEBER os avisos
-                email.To.Add(new MailboxAddress("Advogado", "luiz.felipesbc@gmail.com"));
+                email.To.Add(new MailboxAddress("Advogado", "rodriguesgracaadvocacia@gmail.com"));
 
                 email.Subject = "Novo Contato do Site: " + (dados.Assunto ?? "Sem Assunto");
 
@@ -61,7 +61,7 @@ namespace MariaBlogJuridico.Controllers
 
                     // AQUI É O PULO DO GATO:
                     // Use seu e-mail completo e a SENHA DE APP (aquela de 16 letras), não a senha normal
-                    client.Authenticate("luiz.felipesbc@gmail.com", "isho hulz plgu tcwx ");
+                    client.Authenticate("rodriguesgracaadvocacia@gmail.com", "c t b n f m p v c o p s k n x a ");
 
                     client.Send(email);
                     client.Disconnect(true);

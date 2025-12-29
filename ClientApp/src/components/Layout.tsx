@@ -1,6 +1,7 @@
 ﻿import React, { useState } from 'react';
 import { BookOpen, PenTool, Settings, LogOut, Menu, MessageSquare } from 'lucide-react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import logoFull from '../assets/logo-rodrigues-full.png';
 
 interface LayoutProps {
     children: React.ReactNode;
@@ -31,7 +32,14 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
                 {/* Topo do Menu */}
                 <div className="p-4 flex items-center justify-between border-b border-slate-700">
-                    {isSidebarOpen && <h1 className="font-serif text-xl font-bold text-amber-500">MariaBlogJuridico_V2</h1>}
+                    {/* Se a sidebar estiver aberta, mostra o LOGO em vez de texto */}
+                    {isSidebarOpen && (
+                        <img
+                            src={logoFull}
+                            alt="Rodrigues Graça"
+                            className="h-36 w-auto object-contain" // h-14 fica um tamanho bom para a sidebar
+                        />
+                    )}
                     <button onClick={() => setIsSidebarOpen(!isSidebarOpen)} className="p-1 hover:bg-slate-800 rounded">
                         <Menu size={24} />
                     </button>
@@ -55,13 +63,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         onClick={() => navigate('/novo')}
                     />
 
-                    <NavItem
-                        icon={<MessageSquare size={20} />}
-                        text="Fale Conosco"
-                        isOpen={isSidebarOpen}
-                        active={location.pathname === '/contato'}
-                        onClick={() => navigate('/contato')}
-                    />
+                    {/*<NavItem*/}
+                    {/*    icon={<MessageSquare size={20} />}*/}
+                    {/*    text="Fale Conosco"*/}
+                    {/*    isOpen={isSidebarOpen}*/}
+                    {/*    active={location.pathname === '/contato'}*/}
+                    {/*    onClick={() => navigate('/contato')}*/}
+                    {/*/>*/}
 
                     <NavItem
                         icon={<Settings size={20} />}

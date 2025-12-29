@@ -2,6 +2,11 @@
 import { Shield, Users, Award, CheckCircle, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
+// --- MUDANÇA 1: Importar a imagem local aqui no topo ---
+// (Usei um nome de variável 'fotoMariaImg' para representar o arquivo)
+import fotoMariaImg from '../assets/foto maria.png';
+// ------------------------------------------------------
+
 const Sobre = () => {
     const navigate = useNavigate();
 
@@ -23,17 +28,23 @@ const Sobre = () => {
             {/* 2. QUEM SOMOS (Texto + Imagem) */}
             <div className="max-w-6xl mx-auto px-4 py-16">
                 <div className="flex flex-col md:flex-row items-center gap-12">
-                    {/* Imagem do Escritório */}
+
+                    {/* --- ÁREA DA IMAGEM (MUDANÇA AQUI) --- */}
                     <div className="md:w-1/2">
                         <div className="relative">
+                            {/* ESTA DIV É O TRAÇO COLORIDO NA MARGEM (NÃO MEXEMOS NELA) */}
                             <div className="absolute top-4 -left-4 w-full h-full border-2 border-amber-500 rounded-lg"></div>
+
+                            {/* SUBSTITUÍMOS A URL PELA VARIÁVEL DA IMAGEM IMPORTADA */}
                             <img
-                                src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1000&auto=format&fit=crop"
-                                alt="Nosso Escritório"
-                                className="relative rounded-lg shadow-xl w-full h-[400px] object-cover"
+                                src={fotoMariaImg}
+                                alt="Dra. Maria Rodrigues"
+                                // Mantive as classes para garantir o estilo (sombra, cantos arredondados, tamanho)
+                                className="relative rounded-lg shadow-xl w-full h-[400px] object-cover object-top"
                             />
                         </div>
                     </div>
+                    {/* ------------------------------------ */}
 
                     {/* Texto */}
                     <div className="md:w-1/2">
@@ -41,10 +52,13 @@ const Sobre = () => {
                             Compromisso com a Justiça
                         </h2>
                         <p className="text-slate-600 mb-4 leading-relaxed">
-                            Fundado em 2008, o <strong>MariaBlogJuridico_V2 Advogados</strong> nasceu com a missão de oferecer uma advocacia moderna e humanizada. Entendemos que por trás de cada processo existe uma história de vida ou o futuro de uma empresa.
+                            No <strong>Rodrigues Graça Advocacia</strong>, temos o compromisso de oferecer soluções jurídicas personalizadas e eficientes no âmbito do Direito do Trabalho, com foco tanto na defesa dos direitos dos trabalhadores quanto no atendimento especializado às empresas.
+                            Nossa fundadora, Dra. Maria dos Reis Rodrigues de Souza, é advogada formada pela Universidade São Judas Tadeu-SP, com sólida experiência na área trabalhista desde 2011. Com duas pós-graduações, uma em Direito do Trabalho pela PUC Minas e outra em Direito Empresarial pela Universidade São Judas Tadeu, elas trazem um profundo conhecimento teórico e prático para cada caso.
+                            Em 2021, o escritório foi criado com a missão de proporcionar um atendimento humano e estratégico, baseado em transparência e confiança. Nossa experiência também inclui atuação com negociação e, atualmente, Dra. Maria dos Reis Rodrigues de Souza está em formação em Mediação e Arbitragem, fortalecendo ainda mais nossa capacidade de resolver conflitos de forma rápida e eficaz.
+                            Seja você um trabalhador buscando seus direitos ou uma empresa em busca de assessoria jurídica, o Rodrigues Graça Advocacia está pronto para atuar ao seu lado, garantindo a melhor defesa e orientação em cada situação.
                         </p>
                         <p className="text-slate-600 mb-6 leading-relaxed">
-                            Nossa equipe é formada por especialistas em diversas áreas do direito, prontos para atuar de forma combativa e estratégica, garantindo que seus direitos sejam respeitados em qualquer instância.
+                            Sou especialista na área trabalhista e estou pronta para atuar de forma combativa e estratégica, garantindo que seus direitos sejam respeitados em qualquer instância.
                         </p>
 
                         <div className="grid grid-cols-2 gap-4 mb-8">
@@ -52,7 +66,7 @@ const Sobre = () => {
                                 <CheckCircle size={20} className="text-amber-600" /> Atendimento Personalizado
                             </div>
                             <div className="flex items-center gap-2 text-slate-700 font-medium">
-                                <CheckCircle size={20} className="text-amber-600" /> Especialistas Seniores
+                                <CheckCircle size={20} className="text-amber-600" /> Especialista
                             </div>
                             <div className="flex items-center gap-2 text-slate-700 font-medium">
                                 <CheckCircle size={20} className="text-amber-600" /> Tecnologia Jurídica
@@ -66,7 +80,7 @@ const Sobre = () => {
                             onClick={() => navigate('/contato')}
                             className="bg-slate-900 text-white px-8 py-3 rounded hover:bg-slate-800 transition flex items-center gap-2"
                         >
-                            Fale com um Especialista <ArrowRight size={18} />
+                            Fale comigo <strong>AGORA</strong> <ArrowRight size={18} />
                         </button>
                     </div>
                 </div>
@@ -87,7 +101,7 @@ const Sobre = () => {
                             </div>
                             <h3 className="text-xl font-bold text-slate-800 mb-3">Ética Inegociável</h3>
                             <p className="text-slate-600 text-sm">
-                                Atuamos com total transparência e lealdade aos nossos clientes, respeitando rigorosamente o código de ética.
+                                Atuo com total transparência e lealdade aos clientes, respeitando rigorosamente o código de ética.
                             </p>
                         </div>
 
@@ -97,7 +111,7 @@ const Sobre = () => {
                             </div>
                             <h3 className="text-xl font-bold text-slate-800 mb-3">Excelência Técnica</h3>
                             <p className="text-slate-600 text-sm">
-                                Nossos profissionais estão em constante atualização acadêmica para oferecer as melhores teses jurídicas.
+                                Advocacia de alta performance, pautada no aperfeiçoamento contínuo para oferecer soluções jurídicas de vanguarda.
                             </p>
                         </div>
 
@@ -120,7 +134,7 @@ const Sobre = () => {
                     Precisa de orientação jurídica?
                 </h2>
                 <p className="text-slate-600 mb-8 max-w-xl mx-auto">
-                    Não deixe suas dúvidas para depois. Nossa equipe está pronta para analisar o seu caso.
+                    Não deixe suas dúvidas para depois. Entre em contato para analisar o seu caso.
                 </p>
                 <button
                     onClick={() => navigate('/contato')}

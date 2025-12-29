@@ -54,7 +54,7 @@ const Contato = () => {
                                 </div>
                                 <div>
                                     <p className="text-xs text-slate-400 uppercase font-bold">Telefone</p>
-                                    <p>(11) 9999-9999</p>
+                                    <p>(11) 96580-0994</p>
                                 </div>
                             </div>
 
@@ -64,7 +64,7 @@ const Contato = () => {
                                 </div>
                                 <div>
                                     <p className="text-xs text-slate-400 uppercase font-bold">E-mail</p>
-                                    <p>contato@juris.com</p>
+                                    <p>rodriguesgracaadvocacia@gmail.com</p>
                                 </div>
                             </div>
 
@@ -74,7 +74,7 @@ const Contato = () => {
                                 </div>
                                 <div>
                                     <p className="text-xs text-slate-400 uppercase font-bold">Localização</p>
-                                    <p>Av. Paulista, 1000 - SP</p>
+                                    <p>Av. 24 de Maio, 276 - 3º Andar</p>
                                 </div>
                             </div>
                         </div>
