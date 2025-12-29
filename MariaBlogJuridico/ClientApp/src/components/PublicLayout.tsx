@@ -11,7 +11,7 @@ const PublicLayout: React.FC<LayoutProps> = ({ children }) => {
     const navigate = useNavigate();
 
     // SEU NÚMERO DE WHATSAPP AQUI (formato: código país + ddd + número, apenas números)
-    const numeroWhatsApp = "5511942089446";
+    const numeroWhatsApp = "5511965800994";
     const mensagemPadrao = "Olá! Gostaria de uma consultoria jurídica.";
 
     return (
