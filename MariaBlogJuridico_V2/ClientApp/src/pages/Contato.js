@@ -53,7 +53,7 @@ var Contato = function () {
                     _a.label = 1;
                 case 1:
                     _a.trys.push([1, 3, 4, 5]);
-                    return [4 /*yield*/, fetch('https://localhost:7298/contato', {
+                    return [4 /*yield*/, fetch('https://mariablogjuridicov220260101180428-cje2e8grfva6dnhv.canadacentral-01.azurewebsites.net/contato', {
                             method: 'POST',
                             headers: { 'Content-Type': 'application/json' },
                             body: JSON.stringify({ nome: nome, email: email, mensagem: mensagem, assunto: "Contato pelo Site" })

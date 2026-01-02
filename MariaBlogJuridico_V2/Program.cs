@@ -54,11 +54,10 @@ var app = builder.Build();
 // --- CONFIGURAÇÃO DO PIPELINE (A ordem aqui importa muito!) ---
 
 // 5. Ativar o Swagger (Se estiver em desenvolvimento)
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+
+app.UseSwagger();
+app.UseSwaggerUI();
+
 
 app.UseHttpsRedirection();
 
@@ -75,5 +74,24 @@ app.UseAuthorization();  // O que você pode fazer?
 
 app.MapControllers();
 app.MapFallbackToFile("index.html");
+
+// --- INÍCIO DO BLOCO DE CRIAÇÃO AUTOMÁTICA DO BANCO ---
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    try
+    {
+        var context = services.GetRequiredService<AppDbContext>();
+        context.Database.Migrate(); // Aplica as migrações (cria as tabelas)
+    }
+    catch (Exception ex)
+    {
+        var logger = services.GetRequiredService<ILogger<Program>>();
+        logger.LogError(ex, "Ocorreu um erro ao criar o banco de dados.");
+    }
+}
+// --- FIM DO BLOCO ---
+
+
 
 app.Run();

@@ -27,7 +27,7 @@ const Dashboard = () => {
 
     const carregarArtigos = async () => {
         try {
-            const resposta = await fetch('https://localhost:7298/artigos');
+            const resposta = await fetch('https://mariablogjuridicov220260101180428-cje2e8grfva6dnhv.canadacentral-01.azurewebsites.net/artigos');
             if (resposta.ok) {
                 const dados = await resposta.json();
                 setArtigos(dados);
@@ -40,7 +40,7 @@ const Dashboard = () => {
     const excluirArtigo = async (id) => {
         if (window.confirm("Tem certeza que deseja excluir este artigo?")) {
             try {
-                const resposta = await fetch(`https://localhost:7298/artigos/${id}`, { method: 'DELETE' });
+                const resposta = await fetch(`https://mariablogjuridicov220260101180428-cje2e8grfva6dnhv.canadacentral-01.azurewebsites.net/artigos/${id}`, { method: 'DELETE' });
                 if (resposta.ok) {
                     setArtigos(artigos.filter(a => a.id !== id));
                     alert("Artigo excluído!");

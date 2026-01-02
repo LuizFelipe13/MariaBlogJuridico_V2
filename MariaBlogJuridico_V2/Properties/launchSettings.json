@@ -11,7 +11,7 @@
     "MariaBlogJuridico_V2": {
       "commandName": "Project",
       "launchBrowser": true,
-      "applicationUrl": "https://localhost:7298;http://localhost:5257",
+      "applicationUrl": "https://mariablogjuridicov220260101180428-cje2e8grfva6dnhv.canadacentral-01.azurewebsites.net;http://localhost:5257",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
         "ASPNETCORE_HOSTINGSTARTUPASSEMBLIES": "Microsoft.AspNetCore.SpaProxy"

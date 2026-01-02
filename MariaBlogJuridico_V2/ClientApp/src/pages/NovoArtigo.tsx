@@ -23,7 +23,7 @@ const NovoArtigo = () => {
 
         try {
             // Envia para o endpoint de upload que criamos
-            const resposta = await fetch('https://localhost:7298/artigos/upload', {
+            const resposta = await fetch('https://mariablogjuridicov220260101180428-cje2e8grfva6dnhv.canadacentral-01.azurewebsites.net/artigos/upload', {
                 method: 'POST',
                 body: formData
             });
@@ -49,7 +49,7 @@ const NovoArtigo = () => {
         }
 
         try {
-            const resposta = await fetch('https://localhost:7298/artigos', {
+            const resposta = await fetch('https://mariablogjuridicov220260101180428-cje2e8grfva6dnhv.canadacentral-01.azurewebsites.net/artigos', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({

@@ -1,5 +1,5 @@
-﻿import React from 'react';
-import { UserCircle } from 'lucide-react'; // Removi o 'Scale' pois não vamos mais usar
+﻿import React, { useState } from 'react'; // Adicionei useState
+import { UserCircle, Menu, X } from 'lucide-react'; // Adicionei Menu e X
 import { useNavigate } from 'react-router-dom';
 import Footer from './Footer.tsx';
 
@@ -13,29 +13,37 @@ interface LayoutProps {
 const PublicLayout: React.FC<LayoutProps> = ({ children }) => {
     const navigate = useNavigate();
 
+    // Estado para controlar o menu no celular
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
     // SEU NÚMERO DE WHATSAPP AQUI
     const numeroWhatsApp = "551165800994";
     const mensagemPadrao = "Olá! Gostaria de uma consultoria jurídica.";
+
+    // Função para navegar e fechar o menu (útil no mobile)
+    const handleNavigation = (path: string) => {
+        navigate(path);
+        setIsMenuOpen(false);
+    };
 
     return (
         <div className="min-h-screen bg-slate-50 font-sans flex flex-col">
 
             {/* Navbar Superior */}
-            {/* Aumentei um pouco a altura do menu (h-24) para o logo caber melhor */}
             <nav className="bg-[#0f1420] text-white shadow-lg relative z-20 transition-all">
                 <div className="max-w-6xl mx-auto px-4">
                     <div className="flex justify-between items-center h-[220px]">
 
-                        {/* --- ÁREA DO LOGO (MUDANÇA AQUI) --- */}
-                        <div onClick={() => navigate('/')} className="cursor-pointer transition hover:opacity-90">
+                        {/* --- ÁREA DO LOGO --- */}
+                        <div onClick={() => handleNavigation('/')} className="cursor-pointer transition hover:opacity-90 z-50">
                             <img
                                 src={logoFull}
                                 alt="Rodrigues Graça Advocacia"
-                                className="h-[220px] w-auto object-contain py-2" // Ajuste o h-20 se quiser maior ou menor
+                                className="h-[200px] w-auto object-contain py-2" // Ajustei levemente para 200px para margem de segurança
                             />
                         </div>
-                        {/* ----------------------------------- */}
 
+                        {/* --- MENU DESKTOP (Somente telas médias pra cima) --- */}
                         <div className="hidden md:flex space-x-8 items-center font-medium">
                             <button onClick={() => navigate('/')} className="hover:text-amber-500 transition">Home</button>
                             <button onClick={() => navigate('/sobre')} className="hover:text-amber-500 transition">Sobre o Escritório</button>
@@ -48,15 +56,48 @@ const PublicLayout: React.FC<LayoutProps> = ({ children }) => {
                                 <UserCircle size={18} /> Área do Advogado
                             </button>
                         </div>
+
+                        {/* --- BOTÃO HAMBÚRGUER (Somente Mobile) --- */}
+                        <div className="md:hidden z-50">
+                            <button
+                                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                                className="text-white hover:text-amber-500 focus:outline-none p-2"
+                            >
+                                {isMenuOpen ? <X size={32} /> : <Menu size={32} />}
+                            </button>
+                        </div>
                     </div>
                 </div>
+
+                {/* --- MENU MOBILE (A lista que abre) --- */}
+                {/* Renderização condicional: Só aparece se isMenuOpen for true */}
+                {isMenuOpen && (
+                    <div className="md:hidden bg-[#0f1420] border-t border-gray-700 absolute w-full left-0 top-[220px] shadow-xl py-4 px-6 flex flex-col space-y-4 animate-in slide-in-from-top-5 fade-in duration-200">
+                        <button onClick={() => handleNavigation('/')} className="text-left text-lg hover:text-amber-500 py-2 border-b border-gray-700">
+                            Home
+                        </button>
+                        <button onClick={() => handleNavigation('/sobre')} className="text-left text-lg hover:text-amber-500 py-2 border-b border-gray-700">
+                            Sobre o Escritório
+                        </button>
+                        <button onClick={() => handleNavigation('/contato')} className="text-left text-lg hover:text-amber-500 py-2 border-b border-gray-700">
+                            Contato
+                        </button>
+                        <button
+                            onClick={() => handleNavigation('/admin')}
+                            className="bg-amber-600 hover:bg-amber-700 px-4 py-3 rounded text-center font-bold flex items-center justify-center gap-2 mt-2"
+                        >
+                            <UserCircle size={20} /> Área do Advogado
+                        </button>
+                    </div>
+                )}
             </nav>
 
-            {/* ... resto do código (Conteúdo, Botão WhatsApp e Footer) ... */}
+            {/* Conteúdo Principal */}
             <main className="flex-1 bg-slate-50 relative z-10">
                 {children}
             </main>
 
+            {/* Botão WhatsApp Flutuante */}
             <a
                 href={`https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagemPadrao)}`}
                 target="_blank"

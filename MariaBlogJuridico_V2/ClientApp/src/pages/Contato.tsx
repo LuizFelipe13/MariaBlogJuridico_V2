@@ -13,7 +13,7 @@ const Contato = () => {
 
         try {
             // Nota: Adicionei um "assunto" fixo para não dar erro 400 no backend antigo
-            const resposta = await fetch('https://localhost:7298/contato', {
+            const resposta = await fetch('https://mariablogjuridicov220260101180428-cje2e8grfva6dnhv.canadacentral-01.azurewebsites.net/contato', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ nome, email, mensagem, assunto: "Contato pelo Site" })

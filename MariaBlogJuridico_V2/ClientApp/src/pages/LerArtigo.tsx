@@ -11,7 +11,7 @@ const LerArtigo = () => {
         const buscarArtigo = async () => {
             try {
                 // Busca o artigo específico no C#
-                const resposta = await fetch(`https://localhost:7298/artigos/${id}`);
+                const resposta = await fetch(`https://mariablogjuridicov220260101180428-cje2e8grfva6dnhv.canadacentral-01.azurewebsites.net/artigos/${id}`);
                 if (resposta.ok) {
                     const dados = await resposta.json();
                     setArtigo(dados);

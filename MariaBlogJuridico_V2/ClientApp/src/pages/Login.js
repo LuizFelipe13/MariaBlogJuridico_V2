@@ -51,7 +51,7 @@ var Login = function () {
                     _a.label = 1;
                 case 1:
                     _a.trys.push([1, 6, , 7]);
-                    return [4 /*yield*/, fetch('https://localhost:7298/auth/login', {
+                    return [4 /*yield*/, fetch('https://mariablogjuridicov220260101180428-cje2e8grfva6dnhv.canadacentral-01.azurewebsites.net/auth/login', {
                             method: 'POST',
                             headers: { 'Content-Type': 'application/json' },
                             body: JSON.stringify({ email: email, senha: senha })

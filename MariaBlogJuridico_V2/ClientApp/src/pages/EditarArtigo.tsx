@@ -15,7 +15,7 @@ const EditarArtigo = () => {
     useEffect(() => {
         const carregarDados = async () => {
             try {
-                const resposta = await fetch(`https://localhost:7298/artigos/${id}`);
+                const resposta = await fetch(`https://mariablogjuridicov220260101180428-cje2e8grfva6dnhv.canadacentral-01.azurewebsites.net/artigos/${id}`);
                 if (resposta.ok) {
                     const dados = await resposta.json();
                     setTitulo(dados.titulo);
@@ -34,7 +34,7 @@ const EditarArtigo = () => {
     // 2. Salvar as alterações (PUT)
     const handleAtualizar = async () => {
         try {
-            const resposta = await fetch(`https://localhost:7298/artigos/${id}`, {
+            const resposta = await fetch(`https://mariablogjuridicov220260101180428-cje2e8grfva6dnhv.canadacentral-01.azurewebsites.net/artigos/${id}`, {
                 method: 'PUT', // <--- MUDOU DE POST PARA PUT
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({

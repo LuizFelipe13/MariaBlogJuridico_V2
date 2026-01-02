@@ -71,7 +71,7 @@ namespace MariaBlogJuridico_V2.Controllers
             }
 
             // 4. Retorna a URL pública para o React usar
-            // Exemplo: https://localhost:7298/imagens/3842-foto.jpg
+            // Exemplo: https://mariablogjuridicov220260101180428-cje2e8grfva6dnhv.canadacentral-01.azurewebsites.net/imagens/3842-foto.jpg
             var urlImagem = $"{Request.Scheme}://{Request.Host}/imagens/{nomeArquivo}";
 
             return Ok(new { url = urlImagem });

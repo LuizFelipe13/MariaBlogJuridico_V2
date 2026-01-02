@@ -50,7 +50,7 @@ var LerArtigo = function () {
                 switch (_a.label) {
                     case 0:
                         _a.trys.push([0, 5, , 6]);
-                        return [4 /*yield*/, fetch("https://localhost:7298/artigos/".concat(id))];
+                        return [4 /*yield*/, fetch("https://mariablogjuridicov220260101180428-cje2e8grfva6dnhv.canadacentral-01.azurewebsites.net/artigos/".concat(id))];
                     case 1:
                         resposta = _a.sent();
                         if (!resposta.ok) return [3 /*break*/, 3];

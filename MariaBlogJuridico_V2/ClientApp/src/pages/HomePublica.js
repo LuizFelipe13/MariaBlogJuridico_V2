@@ -65,8 +65,8 @@ var HomePublica = function () {
                     case 0:
                         _a.trys.push([0, 4, , 5]);
                         url = termo
-                            ? "https://localhost:7298/artigos?termo=".concat(encodeURIComponent(termo))
-                            : 'https://localhost:7298/artigos';
+                            ? "https://mariablogjuridicov220260101180428-cje2e8grfva6dnhv.canadacentral-01.azurewebsites.net/artigos?termo=".concat(encodeURIComponent(termo))
+                            : 'https://mariablogjuridicov220260101180428-cje2e8grfva6dnhv.canadacentral-01.azurewebsites.net/artigos';
                         return [4 /*yield*/, fetch(url)];
                     case 1:
                         resposta = _a.sent();

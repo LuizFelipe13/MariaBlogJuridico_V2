@@ -10,8 +10,8 @@ const HomePublica = () => {
     const carregarArtigos = async (termo = '') => {
         try {
             const url = termo
-                ? `https://localhost:7298/artigos?termo=${encodeURIComponent(termo)}`
-                : 'https://localhost:7298/artigos';
+                ? `https://mariablogjuridicov220260101180428-cje2e8grfva6dnhv.canadacentral-01.azurewebsites.net/artigos?termo=${encodeURIComponent(termo)}`
+                : 'https://mariablogjuridicov220260101180428-cje2e8grfva6dnhv.canadacentral-01.azurewebsites.net/artigos';
 
             const resposta = await fetch(url);
             if (resposta.ok) {

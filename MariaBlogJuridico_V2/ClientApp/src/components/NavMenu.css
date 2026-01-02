@@ -1,18 +1,49 @@
-﻿a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+﻿/* Fundo Azul Escuro */
+.custom-nav {
+    background-color: #0f172a !important;
+    min-height: 80px; /* Garante altura para o botão caber */
 }
 
-html {
-  font-size: 14px;
+/* LOGO */
+.navbar-brand {
+    color: white !important;
+    font-size: 1.2rem;
+    font-weight: bold;
+    max-width: 65%; /* Deixa espaço para o botão */
 }
+
+/* O BOTÃO "MENU" - POSICIONAMENTO FORÇADO */
+.my-toggle-btn {
+    display: block !important;
+    background-color: #1e293b !important; /* Fundo cinza azulado para destacar */
+    border: 1px solid white !important;
+    padding: 5px 10px !important;
+    border-radius: 5px;
+    /* Aqui está o segredo: Posição Absoluta */
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    z-index: 9999;
+}
+
+/* Esconde o botão MENU em telas de computador */
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    .my-toggle-btn {
+        display: none !important;
+    }
 }
 
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+/* ESTILO DOS LINKS */
+.navbar-nav .nav-link {
+    color: #e2e8f0 !important;
+    margin-top: 10px; /* Espaço entre links no mobile */
+}
+
+/* Fundo do menu aberto */
+.navbar-collapse {
+    background-color: #0f172a;
+    padding: 15px;
+    position: relative;
+    z-index: 1000;
+    top: 10px; /* Empurra um pouco para baixo */
 }
